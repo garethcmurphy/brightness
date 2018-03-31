@@ -58,7 +58,7 @@ class Brightness(object):
     </creator> 
   </creators>  
   <titles> 
-    <title>Design report data aggregator software</title> 
+    <title>{1}</title> 
   </titles>  
   <publisher>European Spallation Source ERIC</publisher>  
   <publicationYear>2015</publicationYear>  
@@ -71,13 +71,38 @@ class Brightness(object):
 
         return xml.format(doi, title, abstract)
 
+    def doi_url(self, doi, url):
+        doi_url = """{0} 
+{1}"""
+        return doi_url.format(doi, url)
+
     def request_post(self, doi, title, abstract, url):
         xml = self.generate_xml(doi, title, abstract);
+
+        print(xml)
         headers = {'Content-Type': 'application/xml'}
         requests.post('https://mds.test.datacite.org/metadata', data=xml, headers=headers,
-                      auth=HTTPBasicAuth('user', 'pass'))
+                      auth=HTTPBasicAuth(self.user, self.password))
+
+        doi_url = self.doi_url(doi, url)
+        requests.post('https://mds.test.datacite.org/metadata', data=doi_url, headers=headers,
+                      auth=HTTPBasicAuth(self.user, self.password))
+
+    def get_password(self):
+        import itertools
+        with open('/tmp/auth') as f:
+            for user, password in itertools.izip_longest(*[f] * 2):
+                print(user, password)
+        self.user = user
+        self.password = password
 
 
 if __name__ == '__main__':
     bright = Brightness()
+    bright.get_password()
     bright.f()
+    doi = '10.17199/BRIGHTNESS.D5.2'
+    title = 'test title'
+    abstract = 'test abstract'
+    url = 'www.test.com'
+    bright.request_post(doi, title, abstract, url)
