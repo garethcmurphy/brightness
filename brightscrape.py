@@ -24,6 +24,8 @@ class Scrape(object):
             # print(soup.prettify())
             mydivs = soup.findAll("div", {"class": "field field-name-body"})
             print(mydivs)
+
+            print (" ".join(mydivs[0].strings))
             # x= ''.join(BeautifulSoup(mydivs[0], "html.parser").find_all(text=True))
             # print (key, x)
 
