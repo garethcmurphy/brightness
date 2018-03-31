@@ -3,6 +3,8 @@ import requests
 
 from bs4 import BeautifulSoup
 
+from brightness import Brightness
+
 
 class Scrape(object):
     """XML metadata"""
@@ -11,12 +13,20 @@ class Scrape(object):
         self.page = "test"
 
     def scrape(self):
-        page = requests.get("https://brightness.esss.se/about/deliverables/53-beta-version-data-aggregator-software")
-        print(page.status_code)
-        soup = BeautifulSoup(page.content, 'html.parser')
-        # print(soup.prettify())
-        mydivs = soup.findAll("div", {"class": "field field-name-body"})
-        print(mydivs)
+        bright = Brightness()
+        deliv = bright.deliverable_dict
+        for key, value in deliv.items():
+            url = "https://brightness.esss.se/about/deliverables/" + key + "-" + value
+            print(url)
+            page = requests.get(url)
+            #print(page.status_code)
+            soup = BeautifulSoup(page.content, 'html.parser')
+            #print(soup.prettify())
+            mydivs = soup.findAll("div", {"class": "field field-name-body"})
+            print(mydivs)
+            #x= ''.join(BeautifulSoup(mydivs[0], "html.parser").find_all(text=True))
+            #print (key, x)
+
 
 
 if __name__ == '__main__':
