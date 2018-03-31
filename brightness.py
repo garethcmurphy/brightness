@@ -36,7 +36,7 @@ class Brightness(object):
             '61': 'brightess-section-wwweuropeanspallationsourcesei',
             '62': 'results-target-group-online-survey'
         }
-        self.password = 'tbc'
+        self.passw = 'tbc'
         self.user = 'tbc'
 
     def f(self):
@@ -72,29 +72,35 @@ class Brightness(object):
         return xml.format(doi, title, abstract)
 
     def doi_url(self, doi, url):
-        doi_url = """{0} 
-{1}"""
-        return doi_url.format(doi, url)
+        doi_url = 'doi={0}\nurl={1}'
+        xdoi = doi_url.format(doi, url)
+        print(xdoi)
+        return xdoi.strip()
 
     def request_post(self, doi, title, abstract, url):
         xml = self.generate_xml(doi, title, abstract);
 
         print(xml)
-        headers = {'Content-Type': 'application/xml'}
-        requests.post('https://mds.test.datacite.org/metadata', data=xml, headers=headers,
-                      auth=HTTPBasicAuth(self.user, self.password))
+        headers = {'Content-Type': 'application/xml;charset=UTF-8'}
+        # response = requests.post('https://mds.datacite.org/metadata', data=xml.encode('utf-8'), headers=headers,
+        #                         auth=HTTPBasicAuth(self.user, self.passw))
 
         doi_url = self.doi_url(doi, url)
-        requests.post('https://mds.test.datacite.org/metadata', data=doi_url, headers=headers,
-                      auth=HTTPBasicAuth(self.user, self.password))
+        headers2 = {'Content-Type': 'text/plain;charset=UTF-8'}
+
+        response2 = requests.post('https://mds.datacite.org/doi', data=doi_url.encode('utf-8'), headers=headers2,
+                                  auth=HTTPBasicAuth(self.user, self.passw))
+        print(str(response2.status_code) + " " + response2.text)
+        # print(response)
+        print(response2)
 
     def get_password(self):
-        import itertools
         with open('/tmp/auth') as f:
-            for user, password in itertools.izip_longest(*[f] * 2):
-                print(user, password)
-        self.user = user
-        self.password = password
+            user = f.readline()
+            password = f.readline()
+        self.user = user.strip()
+        self.passw = password.strip()
+        print(self.user, self.passw)
 
 
 if __name__ == '__main__':
@@ -102,7 +108,7 @@ if __name__ == '__main__':
     bright.get_password()
     bright.f()
     doi = '10.17199/BRIGHTNESS.D5.2'
-    title = 'test title'
-    abstract = 'test abstract'
-    url = 'www.test.com'
+    title = '5.2: Report processing choices for detector types'
+    abstract = 'Task 5.1 Creating a standard neutron event data stream for different detector types focuses on software event processing for the expected ESS detector suite. This will deliver generic neutron event information required for scientific experiments. Deliverable 5.2, which presents the results of our investigations in this task, shows that we are in a good position to cope with the processing needs of the different detector types once their configuration is final. For the future of the BrightnESS task, we see no unusual or high impact risks. For the majority of cases, specifications of upcoming detectors and their raw output format are not yet in a state that allows software prototyping. However, during the course of the project thus far, we have developed a good working relationship with the detector group and their partner institutes across Europe. That resulted in a good understanding of the domain and, not least, to two working prototypes of the event formation system for NMX and the Multi-Grid detector ahead of schedule. These two detector systems are a good template for future customized implementations. Most systems are quite similar to the Multi-Grid detector, and with NMX we are close to covering the most complex computational needs. To drive these working prototypes forward, we have put in place a common and modular framework. It hosts the detector-type specific processing algorithms whereby future tasks are divided into manageable modular chunks. With the tools developed, we are confident that we can adapt our processing algorithms and parameters in sync with any new hardware prototypes that become available, any updates to prototype detectors and production versions. We will be able to review quality indicators for individual events, statistics within and across datasets and interactively examine the effect of different filters or code changes. The software will also enable the specialist from ESS’ Data Management and Software Centre (DMSC) or the ESS detector group to fine-tune the event processing pipeline, change detector architecture and varying user needs, and will serve as commissioning and calibration tools.'
+    url = 'https://brightness.esss.se/about/deliverables/52-report-processing-choices-detector-types'
     bright.request_post(doi, title, abstract, url)
