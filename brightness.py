@@ -128,14 +128,20 @@ class Brightness(object):
         self.passw = password.strip()
         print(self.user, self.passw)
 
-    def make_doi(self):
+    def make_doi(self, source_str):
+        pos = 1
+        insert_str = '.'
+        tag2 = source_str[:pos] + insert_str + source_str[pos:]
+        doi = '10.17199/BRIGHTNESS.D5.'+tag2
+        return doi
 
 
 if __name__ == '__main__':
     bright = Brightness()
     bright.get_password()
     bright.f()
-    doi = '10.17199/BRIGHTNESS.D5.2'
+    tag = '53'
+    doi = bright.make_doi(tag)
     title = '5.2: Report processing choices for detector types'
     abstract = 'Task 5.1 Creating a standard neutron event data stream for different detector types focuses on software event processing for the expected ESS detector suite. This will deliver generic neutron event information required for scientific experiments. Deliverable 5.2, which presents the results of our investigations in this task, shows that we are in a good position to cope with the processing needs of the different detector types once their configuration is final. For the future of the BrightnESS task, we see no unusual or high impact risks. For the majority of cases, specifications of upcoming detectors and their raw output format are not yet in a state that allows software prototyping. However, during the course of the project thus far, we have developed a good working relationship with the detector group and their partner institutes across Europe. That resulted in a good understanding of the domain and, not least, to two working prototypes of the event formation system for NMX and the Multi-Grid detector ahead of schedule. These two detector systems are a good template for future customized implementations. Most systems are quite similar to the Multi-Grid detector, and with NMX we are close to covering the most complex computational needs. To drive these working prototypes forward, we have put in place a common and modular framework. It hosts the detector-type specific processing algorithms whereby future tasks are divided into manageable modular chunks. With the tools developed, we are confident that we can adapt our processing algorithms and parameters in sync with any new hardware prototypes that become available, any updates to prototype detectors and production versions. We will be able to review quality indicators for individual events, statistics within and across datasets and interactively examine the effect of different filters or code changes. The software will also enable the specialist from ESS’ Data Management and Software Centre (DMSC) or the ESS detector group to fine-tune the event processing pipeline, change detector architecture and varying user needs, and will serve as commissioning and calibration tools.'
     url = 'https://brightness.esss.se/about/deliverables/52-report-processing-choices-detector-types'
