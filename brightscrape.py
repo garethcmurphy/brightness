@@ -7,6 +7,7 @@ from brightness import Brightness
 
 import pprint
 
+
 class Scrape(object):
     """XML metadata"""
 
@@ -32,7 +33,7 @@ class Scrape(object):
                 abstract = mydivs
                 abstract = ' '
             abstract.strip('"')
-            #print(abstract)
+            # print(abstract)
 
             self.deliv_abstracts[key] = abstract
             # x= ''.join(BeautifulSoup(mydivs[0], "html.parser").find_all(text=True))
@@ -40,6 +41,8 @@ class Scrape(object):
 
         pp = pprint.PrettyPrinter(indent=4)
         print(self.deliv_abstracts)
+
+
 if __name__ == '__main__':
     scrape = Scrape()
     scrape.scrape()
