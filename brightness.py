@@ -171,6 +171,7 @@ if __name__ == '__main__':
     bright.get_password()
     bright.f()
     deliv = bright.deliv_tags
+
     for tag1 in deliv:
         tag = str(tag1)
         print(tag)
