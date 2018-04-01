@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import sys
 import requests
 
 from requests.auth import HTTPBasicAuth
@@ -10,6 +11,8 @@ class Brightness(object):
     def __init__(self):
         self.deliverables = [1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 2.4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10,
                              5.1, 5.2, 5.3, 5.4, 6.1, 6.2]
+
+        self.deliv_tags = [11, 12, 13, 14, 21, 22, 23, 24, 41, 42, 43, 44, 45, 46, 47,  49, 410, 54, 61, 62]
 
         self.deliverable_dict = {
             '11': 'agenda-and-minutes-general-assembly-kick-meeting',
@@ -38,6 +41,30 @@ class Brightness(object):
         }
         self.passw = 'tbc'
         self.user = 'tbc'
+
+        self.deliverable_title = {'11': '1.1: Agenda and minutes of the General Assembly / Kick-off meeting ',
+                                  '12': '1.2: Data Management Plan ',
+                                  '13': '1.3: 1st Agenda and minutes of yearly General Assembly ',
+                                  '14': '1.4: 2nd Agenda and minutes of yearly General Assembly ',
+                                  '21': '2.1: Risk assessment and mitigation plan ',
+                                  '22': '2.2: Launch of IKC Best practice online platform  ',
+                                  '23': '2.3: Deployment of Management Information System ',
+                                  '24': '2.4: 1st Annual IKC Progress Assessment ',
+                                  '41': '4.1: Integration plan for detector readout ',
+                                  '410': '4.10: Test for technology demonstrator ',
+                                  '42': '4.2: Counting rate capability ',
+                                  '43': '4.3: Natural and enriched Gadolinium convertors design ',
+                                  '44': '4.4: Report on the engineering design of BRR low dimensional moderator ',
+                                  '45': '4.5: Simulation and Generic multi-grid design ',
+                                  '46': '4.6: Detector characterisation ',
+                                  '47': '4.7: Report on the conception design of the ESS and the BRR test beamline ',
+                                  '49': '4.9: Detector electronics chain ',
+                                  '51': '5.1: Design report data aggregator software ',
+                                  '52': '5.2: Report processing choices for detector types ',
+                                  '53': '5.3: Beta-version data aggregator software ',
+                                  '54': '5.4: Report filed data acquisition ',
+                                  '61': 'Deliverables ',
+                                  '62': '6.2: Results of target group online survey '}
 
         self.deliverable_abstracts = {
             '11': 'The kick-off meeting held on September 25 2015 in Lund, Sweden successfully brought together representatives from all the 18 institutions that form the BrightnESS Consortium. It was an opportunity for all partners to align on the main objectives of the project, to present their prospective contribution to the project and get more information on the project management formalities. \n The aim of the meeting was to ensure that everyone has a common understanding of the project and their roles in it. All 18 research and academic institutions were represented at the meeting, which gathered a total of 68 participants. All guests were invited to an informal networking dinner on the evening of September 24. \n The schedule continued next day with the kick-off meeting during the first part of the day, and individual work package specific sessions in the afternoon. \n',
@@ -108,8 +135,9 @@ class Brightness(object):
 
         print(xml)
         headers = {'Content-Type': 'application/xml;charset=UTF-8'}
-        # response = requests.post('https://mds.datacite.org/metadata', data=xml.encode('utf-8'), headers=headers,
-        #                         auth=HTTPBasicAuth(self.user, self.passw))
+        response = requests.post('https://mds.datacite.org/metadata', data=xml.encode('utf-8'), headers=headers,
+                                 auth=HTTPBasicAuth(self.user, self.passw))
+        print(str(response.status_code) + " " + response.text)
 
         doi_url = self.doi_url(doi, url)
         headers2 = {'Content-Type': 'text/plain;charset=UTF-8'}
@@ -132,17 +160,23 @@ class Brightness(object):
         pos = 1
         insert_str = '.'
         tag2 = source_str[:pos] + insert_str + source_str[pos:]
-        doi = '10.17199/BRIGHTNESS.D5.'+tag2
+        doi = '10.17199/BRIGHTNESS.D' + tag2
         return doi
 
 
 if __name__ == '__main__':
+
+    print(sys.version)
     bright = Brightness()
     bright.get_password()
     bright.f()
-    tag = '53'
-    doi = bright.make_doi(tag)
-    title = '5.2: Report processing choices for detector types'
-    abstract = bright.deliverable_abstracts[tag]
-    url = 'https://brightness.esss.se/about/deliverables/52-report-processing-choices-detector-types'
-    bright.request_post(doi, title, abstract, url)
+    deliv = bright.deliv_tags
+    for tag1 in deliv:
+        tag = str(tag1)
+        print(tag)
+        doi = bright.make_doi(tag)
+        title = bright.deliverable_title[tag]
+        abstract = bright.deliverable_abstracts[tag]
+        url = "https://brightness.esss.se/about/deliverables/" + tag + "-" + bright.deliverable_dict[tag]
+        print(doi, title, abstract, url)
+        bright.request_post(doi, title, abstract, url)
