@@ -5,12 +5,14 @@ from bs4 import BeautifulSoup
 
 from brightness import Brightness
 
+import pprint
 
 class Scrape(object):
     """XML metadata"""
 
     def __init__(self):
         self.page = "test"
+        self.deliv_abstracts = {}
 
     def scrape(self):
         bright = Brightness()
@@ -23,13 +25,21 @@ class Scrape(object):
             soup = BeautifulSoup(page.content, 'html.parser')
             # print(soup.prettify())
             mydivs = soup.findAll("div", {"class": "field field-name-body"})
-            print(mydivs)
+            # print(mydivs)
+            try:
+                abstract = (" ".join(mydivs[0].strings))
+            except IndexError:
+                abstract = mydivs
+                abstract = ' '
+            abstract.strip('"')
+            #print(abstract)
 
-            print (" ".join(mydivs[0].strings))
+            self.deliv_abstracts[key] = abstract
             # x= ''.join(BeautifulSoup(mydivs[0], "html.parser").find_all(text=True))
             # print (key, x)
 
-
+        pp = pprint.PrettyPrinter(indent=4)
+        print(self.deliv_abstracts)
 if __name__ == '__main__':
     scrape = Scrape()
     scrape.scrape()
