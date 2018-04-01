@@ -6,6 +6,7 @@ RUN pip install -r requirements.txt
 
 COPY brightness.py /usr/src/app
 COPY brightscrape.py /usr/src/app
+COPY __init__.py /usr/src/app
 
 WORKDIR /usr/src/app
 
