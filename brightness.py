@@ -63,7 +63,7 @@ class Brightness(object):
             '54': 'To enable cutting edge materials research at the European Spallation Source (ESS), information about the sample and its environment conditions, like temperature, strain, or electric and magnetic field are as important as the collection of neutron event data. This BrightnESS task 5.2 deals with the collection of sample environment information at a higher rate than is routinely done at existing neutron scattering facilities, in order to be prepared for the demands of the high flux source that ESS will provide. This first deliverable of the task lays out the work that has been done so far to gather requirements, identify potential hard- and software solutions, as well as prepare for integrating the sample environment data stream into the general data acquisition chain. It concludes with a roadmap to get to a working demonstrator system by the end of the project. The main challenges are the accurate absolute timestamping of the sampled data, which makes full use of the advanced ESS timing system, as well as the need to support continuous data sampling at high rates, which is a rare operations mode for fast ADCs. The work has been carried out in close collaboration with the other tasks in WP5, the ESS Detector Group (largely in WP4), and the ESS Integrated Control Systems division (ICS). \n',
             '61': ' ',
             '62': 'In its INFRADEV-3-2015 call, the European Commission recognised the challenges and difficulties faced by new pan-European infrastructures such as ESS in the process of becoming fully operational, when technologies, services and procedures need to be finalised and users’ trust and awareness must be built. As a response to the appeal of the European Commission on research infrastructures to give specific attention to interactions with end-users, one of the strategic goals of  BrightnESS  is to gain the trust of future users of ESS from science and industry, and to understand the role of key actors in the innovation ecosystem that ESS will foster. To this end, the  BrightnESS  team, within the framework of Work Package 6 entitled  Collaboration, Communication, and Dissemination,  and Work Package 3 entitled  Organisational Innovation  designed and carried out activities with the aim of acquiring a profound understanding of target groups relevant for ESS and its partners. In 2016,  BrightnESS  launched three parallel initiatives aiming at identifying the needs and expectations of: \n Scientific and academic users \n Industrial users \n Actors in innovation ecosystems \n The ultimate goal of the set of activities was not only to gain a deeper insight on each of the groups, but also to use the findings to develop tailored outreach and engagement strategies, and to shape ESS policies for access and innovation. Each group was assessed through a custom-made approach, which best conformed to the group specifics. \n'
-            }
+        }
 
     def f(self):
         for key, value in self.deliverable_dict.items():
@@ -129,7 +129,6 @@ class Brightness(object):
         print(self.user, self.passw)
 
     def make_doi(self):
-
 
 
 if __name__ == '__main__':
