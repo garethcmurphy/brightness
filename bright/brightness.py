@@ -4,8 +4,6 @@ import requests
 
 from requests.auth import HTTPBasicAuth
 
-
-
 __author__ = "Gareth Murphy"
 __credits__ = ["Gareth Murphy"]
 __license__ = "GPL"
@@ -22,7 +20,7 @@ class Brightness(object):
         self.deliverables = [1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 2.4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 4.10,
                              5.1, 5.2, 5.3, 5.4, 6.1, 6.2]
 
-        self.deliv_tags = [11, 12, 13, 14, 21, 22, 23, 24, 41, 42, 43, 44, 45, 46, 47,  49, 410, 54, 61, 62]
+        self.deliv_tags = [11, 12, 13, 14, 21, 22, 23, 24, 41, 42, 43, 44, 45, 46, 47, 49, 410, 54, 61, 62]
 
         self.deliverable_dict = {
             '11': 'agenda-and-minutes-general-assembly-kick-meeting',
