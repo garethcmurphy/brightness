@@ -3,7 +3,7 @@ import requests
 
 from bs4 import BeautifulSoup
 
-from . import brightness
+from bright import brightness
 
 import pprint
 
@@ -28,41 +28,37 @@ class Scrape(object):
 
     def scrape(self, field_name):
         for key, value in self.deliverable_titles.items():
-            url = self.bright_url + key + "-" + value
-            page = requests.get(url)
-            soup = BeautifulSoup(page.content, 'html.parser')
+            soup = self.get_page(key, value)
             my_divs = soup.findAll("div", {"class": field_name})
-            try:
-                abstract = (" ".join(my_divs[0].strings))
-            except IndexError:
-                abstract = ' '
-            abstract.strip('"')
+            self.get_abstract(key, my_divs)
 
-            self.deliverable_abstracts[key] = abstract
 
-        pprint.PrettyPrinter(indent=4)
-        print(self.deliverable_abstracts)
+    def get_page(self, key, value):
+        url = self.bright_url + key + "-" + value
+        page = requests.get(url)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        return soup
+
+    def get_abstract(self, key, my_divs):
+        try:
+            abstract = (" ".join(my_divs[0].strings))
+        except IndexError:
+            abstract = ' '
+        abstract.strip('"')
+        self.deliverable_abstracts[key] = abstract
 
     def scrape_title(self):
         for key, value in self.deliverable_titles.items():
-            url = self.bright_url + key + "-" + value
-            page = requests.get(url)
-            soup = BeautifulSoup(page.content, 'html.parser')
+            soup = self.get_page(key, value)
             my_divs = soup.findAll("title")
-            try:
-                abstract = (" ".join(my_divs[0].strings))
-            except IndexError:
-                abstract = ' '
-            abstract.strip('"')
+            self.get_abstract(key, my_divs)
 
-            self.deliverable_abstracts[key] = abstract
-
-        pprint.PrettyPrinter(indent=4)
-        print(self.deliverable_abstracts)
 
 
 if __name__ == '__main__':
     scrape = Scrape()
     scrape.scrape_title()
+    print(scrape.deliverable_abstracts)
     search_field_name = "field field-name-body"
     scrape.scrape(search_field_name)
+    print(scrape.deliverable_abstracts)
