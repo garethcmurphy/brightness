@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from bright import brightness
+from ..bright import brightness
 
 __author__ = "Gareth Murphy"
 __credits__ = ["Gareth Murphy"]

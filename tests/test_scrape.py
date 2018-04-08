@@ -1,4 +1,4 @@
-from bright import brightscrape
+from ..bright import brightscrape
 
 __author__ = "Gareth Murphy"
 __credits__ = ["Gareth Murphy"]

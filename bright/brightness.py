@@ -103,7 +103,7 @@ class Brightness(object):
     def f(self):
         for key, value in self.deliverable_dict.items():
             print(key, value)
-        return (0)
+        return 0
 
     def generate_xml(self, doi, title, abstract):
         xml = """<?xml version="1.0" encoding="UTF-8"?>
