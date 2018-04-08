@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
-import requests
 
+import requests
 from requests.auth import HTTPBasicAuth
 
 __author__ = "Gareth Murphy"

@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 import requests
-
 from bs4 import BeautifulSoup
 
 from bright import brightness
-
-import pprint
 
 __author__ = "Gareth Murphy"
 __credits__ = ["Gareth Murphy"]
@@ -32,7 +29,6 @@ class Scrape(object):
             my_divs = soup.findAll("div", {"class": field_name})
             self.get_abstract(key, my_divs)
 
-
     def get_page(self, key, value):
         url = self.bright_url + key + "-" + value
         page = requests.get(url)
@@ -52,7 +48,6 @@ class Scrape(object):
             soup = self.get_page(key, value)
             my_divs = soup.findAll("title")
             self.get_abstract(key, my_divs)
-
 
 
 if __name__ == '__main__':
