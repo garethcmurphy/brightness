@@ -13,7 +13,7 @@ __email__ = "garethcmurphy@gmail.com"
 __status__ = "Development"
 
 
-class Brightness(object):
+class DOIMaker(object):
     """XML metadata"""
 
     def __init__(self):
@@ -139,7 +139,7 @@ class Brightness(object):
         return xdoi.strip()
 
     def request_post(self, doi, title, abstract, url):
-        xml = self.generate_xml(doi, title, abstract);
+        xml = self.generate_xml(doi, title, abstract)
 
         print(xml)
         headers = {'Content-Type': 'application/xml;charset=UTF-8'}
@@ -175,7 +175,7 @@ class Brightness(object):
 if __name__ == '__main__':
 
     print(sys.version)
-    bright = Brightness()
+    bright = DOIMaker()
     bright.get_password()
     bright.f()
     deliv = bright.deliv_tags

@@ -1,4 +1,4 @@
-from ..bright import brightness
+from ..bright import doimaker
 
 __author__ = "Gareth Murphy"
 __credits__ = ["Gareth Murphy"]
@@ -10,6 +10,6 @@ __status__ = "Development"
 
 
 def test_doi():
-    bright = brightness.Brightness()
+    bright = doimaker.DOIMaker()
     assert isinstance(bright.passw, str)
     assert isinstance(bright.user, str)
