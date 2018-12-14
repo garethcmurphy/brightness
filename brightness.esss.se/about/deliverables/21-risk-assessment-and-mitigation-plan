@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns:fb="http://ogp.me/ns/fb#" prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <head profile="http://www.w3.org/1999/xhtml/vocab">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://brightness.esss.se/sites/default/files/favicon.png" type="image/png" />
+<link rel="shortlink" href="/node/34" />
+<link rel="canonical" href="/about/deliverables/21-risk-assessment-and-mitigation-plan" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1: Risk assessment and mitigation plan | Brightness</title>
+    <style type="text/css" media="all">
+@import url("https://brightness.esss.se/modules/system/system.base.css?pa0lun");
+@import url("https://brightness.esss.se/modules/system/system.menus.css?pa0lun");
+@import url("https://brightness.esss.se/modules/system/system.messages.css?pa0lun");
+@import url("https://brightness.esss.se/modules/system/system.theme.css?pa0lun");
+</style>
+<style type="text/css" media="all">
+@import url("https://brightness.esss.se/modules/comment/comment.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/modules/contrib/date/date_api/date.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css?pa0lun");
+@import url("https://brightness.esss.se/modules/field/theme/field.css?pa0lun");
+@import url("https://brightness.esss.se/modules/node/node.css?pa0lun");
+@import url("https://brightness.esss.se/modules/search/search.css?pa0lun");
+@import url("https://brightness.esss.se/modules/user/user.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/modules/contrib/views/css/views.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/modules/contrib/ckeditor/css/ckeditor.css?pa0lun");
+</style>
+<style type="text/css" media="all">
+@import url("https://brightness.esss.se/sites/all/modules/contrib/ctools/css/ctools.css?pa0lun");
+</style>
+<style type="text/css" media="all">
+@import url("https://brightness.esss.se/sites/all/themes/esssource/css/normalize.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/themes/esssource/css/layout.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/themes/esssource/css/colors.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/themes/esssource/css/main.css?pa0lun");
+@import url("https://brightness.esss.se/sites/all/themes/esssource/css/custom.css?pa0lun");
+</style>
+<style type="text/css" media="print">
+@import url("https://brightness.esss.se/sites/all/themes/esssource/css/print.css?pa0lun");
+</style>
+
+<!--[if lte IE 7]>
+<link type="text/css" rel="stylesheet" href="https://brightness.esss.se/sites/all/themes/esssource/css/ie.css?pa0lun" media="all" />
+<![endif]-->
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="https://brightness.esss.se/sites/all/themes/esssource/css/ie6.css?pa0lun" media="all" />
+<![endif]-->
+    <script type="text/javascript" src="https://brightness.esss.se/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://brightness.esss.se/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://brightness.esss.se/misc/drupal.js?pa0lun"></script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/modules/contrib/admin_menu/admin_devel/admin_devel.js?pa0lun"></script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/modules/contrib/spamspan/spamspan.js?pa0lun"></script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/modules/contrib/google_analytics/googleanalytics.js?pa0lun"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-8858311-4", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/themes/esssource/assets/selectivizr-1.0.2/selectivizr-min.js?pa0lun"></script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/themes/esssource/assets/modernizr/modernizr.min.js?pa0lun"></script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/themes/esssource/assets/headhesive.min.js?pa0lun"></script>
+<script type="text/javascript" src="https://brightness.esss.se/sites/all/themes/esssource/js/main.js?pa0lun"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"esssource","theme_token":"sEinQB3spHiYo4IqA7xM8xDRonhIHX10b4wihRi6Dt4","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/contrib\/spamspan\/spamspan.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/esssource\/assets\/selectivizr-1.0.2\/selectivizr-min.js":1,"sites\/all\/themes\/esssource\/assets\/modernizr\/modernizr.min.js":1,"sites\/all\/themes\/esssource\/assets\/headhesive.min.js":1,"sites\/all\/themes\/esssource\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/esssource\/css\/normalize.css":1,"sites\/all\/themes\/esssource\/css\/layout.css":1,"sites\/all\/themes\/esssource\/css\/colors.css":1,"sites\/all\/themes\/esssource\/css\/main.css":1,"sites\/all\/themes\/esssource\/css\/custom.css":1,"sites\/all\/themes\/esssource\/css\/print.css":1,"sites\/all\/themes\/esssource\/css\/ie.css":1,"sites\/all\/themes\/esssource\/css\/ie6.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/about\/deliverables\/21-risk-assessment-and-mitigation-plan":true}});
+//--><!]]>
+</script>
+  </head>
+  <body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-34 node-type-deliverable green" >
+        <div id="page-wrapper"><div id="page">
+
+  <div id="header" class="without-secondary-menu"><div class="section clearfix">
+
+    <span id="toggle"><span></span></span>
+
+          <a href="/" title="Home" rel="home" id="logo">
+        <img src="https://brightness.esss.se/sites/default/files/brightness.png" alt="Home" />
+      </a>
+    
+          <div id="name-and-slogan">
+
+                              <div id="site-name" class="element-invisible">
+              <strong>
+                <a href="/" title="Home" rel="home"><span>Brightness</span></a>
+              </strong>
+            </div>
+                  
+        
+      </div> <!-- /#name-and-slogan -->
+    
+    <div class="block-search-form" >
+  
+  <form action="/about/deliverables/21-risk-assessment-and-mitigation-plan" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." placeholder="search..." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-sU78Ia3FE9biADVjZfQVwoH9eCOSQ3KsIAfX_aObcII" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form></div>
+<div class="block-menu-block-2" >
+      <h2 class="element-invisible">Main menu override</h2>
+  
+  <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu clearfix"><li class="first expanded active-trail menu-mlid-351"><a href="/about" class="active-trail">About</a><ul class="menu clearfix"><li class="first leaf has-children menu-mlid-361"><a href="/about/work-packages">Work Packages</a></li>
+<li class="leaf active-trail menu-mlid-590"><a href="/about/deliverables" class="active-trail">Deliverables</a></li>
+<li class="leaf menu-mlid-815"><a href="/about/milestones">Milestones</a></li>
+<li class="last leaf has-children menu-mlid-649"><a href="/about/networks" class="menu-node-unpublished">Networks</a></li>
+</ul></li>
+<li class="expanded menu-mlid-797"><a href="/partners" title="">Partners</a><ul class="menu clearfix"><li class="first leaf menu-mlid-801"><a href="/partners/people">People</a></li>
+<li class="leaf menu-mlid-813"><a href="/partners/collaborations" class="menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished menu-node-unpublished">Collaborations</a></li>
+<li class="leaf menu-mlid-811"><a href="https://confluence.esss.lu.se/display/BrightnESS" title="" target="_blank">Project Wiki</a></li>
+<li class="leaf menu-mlid-812"><a href="https://jira.esss.lu.se/secure/Dashboard.jspa?selectPageId=12805" title="" target="_blank">Project Management Dashboard</a></li>
+<li class="leaf menu-mlid-924"><a href="/partners/brightness-hub-coordinators">BrightnESS Hub Coordinators</a></li>
+<li class="last leaf menu-mlid-923"><a href="/partners/in-kind-field-coordinators">In-Kind Field Coordinators</a></li>
+</ul></li>
+<li class="leaf menu-mlid-538"><a href="/events">Events</a></li>
+<li class="expanded menu-mlid-551"><a href="/news-and-press" title="">News</a><ul class="menu clearfix"><li class="first last leaf menu-mlid-568"><a href="/news/downloads">Downloads</a></li>
+</ul></li>
+<li class="expanded menu-mlid-364"><a href="/results" class="menu-node-unpublished">Results</a><ul class="menu clearfix"><li class="first leaf menu-mlid-650"><a href="/results/articles">Scientific Articles</a></li>
+<li class="last leaf menu-mlid-651"><a href="/results/progress">Project Progress</a></li>
+</ul></li>
+<li class="expanded menu-mlid-784"><a href="/in-kind-best-practices" title="">In-Kind Best Practices</a><ul class="menu clearfix"><li class="first leaf has-children menu-mlid-785"><a href="/in-kind-best-practices/in-kind-process-overview">In-Kind Process Overview</a></li>
+<li class="leaf menu-mlid-787"><a href="/in-kind-best-practices/ess-partner-countries-and-partner-institutes">ESS Partner Countries</a></li>
+<li class="leaf menu-mlid-788"><a href="/in-kind-best-practices/in-kind-review-committee">In-Kind Review Committee</a></li>
+<li class="leaf menu-mlid-789"><a href="/in-kind-best-practices/advantages-in-kind-contributions">Advantages of In-Kind Contributions</a></li>
+<li class="leaf menu-mlid-791"><a href="/in-kind-best-practices/downloads">In-Kind Downloads</a></li>
+<li class="leaf menu-mlid-790"><a href="/node/114">Questions</a></li>
+<li class="leaf menu-mlid-1080"><a href="/in-kind-best-practices/vat-workshop-in-lund">VAT Workshop in Lund</a></li>
+<li class="leaf menu-mlid-925"><a href="/in-kind-best-practices/workshop-ikc-best-practice-bilbao">Workshop on IKC Best Practice - Bilbao</a></li>
+<li class="leaf menu-mlid-1025"><a href="/in-kind-best-practices/2nd-best-practice-workshop-catania">2nd BrightnESS Best Practice Workshop - Catania</a></li>
+<li class="last leaf menu-mlid-1079"><a href="/in-kind-best-practices/3rd-brightness-best-practice-workshop-in-kind-installations">3rd BrightnESS Best Practice Workshop: In-Kind Installations</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-562"><a href="/contact" title="">Contact</a></li>
+</ul></div>
+</div>
+
+    
+  </div></div> <!-- /.section, /#header -->
+
+  
+  
+  <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
+
+                  <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a> » <a href="/about">About</a> » <a href="/about/deliverables">Deliverables</a></div></div>
+          
+    
+    <div id="content" class="column"><div class="section">
+            <a id="main-content"></a>
+                    <h1 class="title" id="page-title">
+          2.1: Risk assessment and mitigation plan        </h1>
+                          <div class="tabs">
+                  </div>
+                        <div class="block-system-main" >
+  
+  <div class="node node-deliverable node-full view-mode-full   contextual-links-region">
+    <div class="field field-name-post-date">Nov 20, 2015</div><div class="field field-name-work-package deliverable-full-work-package"><div class="block-views-deliverables-block-1" >
+  
+  <div class="view view-deliverables view-id-deliverables view-display-id-block_1 view-dom-id-f1403bdc5880d48327aca855736d6bde">
+          <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">    <span class="views-label views-label-title">Work package: </span>    <span class="field-content"><a href="/about/work-packages/work-package-2-strengthening-in-kind-contribution-and-coordination">Work Package 2: Strengthening In-Kind Contribution and Coordination</a></span>  </div>  </div>
+          </div>
+</div>
+</div><div class="field field-name-body"><p>The construction of ESS is as unique as the ESS itself; this new next generation spallation source is being built on a greenfield site, physically located in Sweden and Denmark. For both countries, the experience of building research infrastructures of this scale is new. To build ESS, most of the necessary skills for its development need to be imported through In-kind Contributions (hereafter IKC) from participating institutes and companies in the member states. The IKC approach is intended to foster collaborations between national academia and industry, representing the entire supply chain.</p>
+<p>The mission for the ESS is the construction of the world’s leading neutron source for material research. In order to achieve this mission it is necessary to build an ESS Organisation with the necessary skills to oversee the project and support its Partners with the capability to manage and integrate IKC into a one highly integrated machine. This heavy reliance on IKC from many partners, poses significant challenges in terms of the management of the technologies, interoperability, integration, quality and timeliness of delivery/construction/operation for a complex and technologically advanced project like ESS.</p>
+<p>The ESS has fully recognised the risks associated with IKC and has taken necessary steps to handle and minimise them. To meet these needs, the ESS has developed a Risk Management Policy, which is based on three documents, including the ESS Risk Management Policy [1], the ESS Risk<br />
+Management Process [2] and the ESS Risk Management Plan [3] as well as the risk register for the entire facility, which are described in further detail below.</p>
+<p>The risks associated with IKC are analysed on different levels: High-level ESS risks associated with IKC for ESS Management, IK Risks to be held by the Individual Projects Accelerator, Target, NSS, as well as for the risks for IKC Partners across Europe and the successful implementation of IKCs.</p>
+<p> </p>
+<p>DOI: <a href="https://doi.org/10.17199/BRIGHTNESS.D2.1" rel="nofollow">https://doi.org/10.17199/BRIGHTNESS.D2.1</a></p>
+</div><div class="field field-name-field-attachment deliverable-full-attachment"><div class="label-above">Downloads:&nbsp;</div><span class="file"><img class="file-icon" alt="PDF icon" title="application/pdf" src="/modules/file/icons/application-pdf.png" /> <a href="https://brightness.esss.se/sites/default/files/deliverables/Deliverable%20Report%202.1%20Risk%20Assessment%20and%20Mitigation%20Plan_1.pdf" type="application/pdf; length=536293">Deliverable Report 2.1 Risk Assessment and Mitigation Plan.pdf</a></span></div></div>
+</div>
+            
+
+    </div></div> <!-- /.section, /#content -->
+
+          <div id="sidebar-second" class="column sidebar"><div class="section">
+        <div class="block-menu-block-4" >
+      <h2><a href="/about" class="active-trail">About</a></h2>
+  
+  <div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-2">
+  <ul class="menu clearfix"><li class="first collapsed menu-mlid-361"><a href="/about/work-packages">Work Packages</a></li>
+<li class="leaf active-trail menu-mlid-590"><a href="/about/deliverables" class="active-trail">Deliverables</a></li>
+<li class="leaf menu-mlid-815"><a href="/about/milestones">Milestones</a></li>
+<li class="last collapsed menu-mlid-649"><a href="/about/networks" class="menu-node-unpublished">Networks</a></li>
+</ul></div>
+</div>
+      </div></div> <!-- /.section, /#sidebar-second -->
+    
+  </div></div> <!-- /#main, /#main-wrapper -->
+
+  
+  <div id="footer-wrapper"><div class="section">
+
+    
+
+    <div id="footer" class="clearfix"><div class="footer-columns-wrapper">
+      <div class="block-boxes-brightness-footer-logo" >
+  
+  <div id='boxes-box-brightness_footer_logo' class='boxes-box'><div class="boxes-box-content"><div class="footer-logo"><img src="/sites/default/files/brightness.png" />is funded by the European Union Framework Programme for Research and Innovation Horizon 2020, under grant agreement 676548.<br />Editor-in-chief: Roger Eriksson.</div>
+</div></div></div>
+<div class="block-boxes-eu-flag-footer" >
+  
+  <div id='boxes-box-eu_flag_footer' class='boxes-box'><div class="boxes-box-content"><div class="flag-container-footer">
+<div class="flag-container-footer-helper"><img src="/sites/default/files/eu.jpg" /></div>
+</div>
+</div></div></div>
+    </div></div> <!-- /#footer -->
+
+
+  </div></div> <!-- /.section, /#footer-wrapper -->
+
+</div></div> <!-- /#page, /#page-wrapper -->
+      </body>
+</html>

@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from ..bright import doimaker
+from doimaker import DOIMaker
 
 __author__ = "Gareth Murphy"
 __credits__ = ["Gareth Murphy"]
@@ -19,7 +19,7 @@ class Scrape(object):
     def __init__(self):
         self.page = "test"
         self.deliverable_abstracts = {}
-        self.bright = doimaker.DOIMaker()
+        self.bright = DOIMaker()
         self.deliverable_titles = self.bright.deliverable_dict
         self.bright_url = "https://brightness.esss.se/about/deliverables/"
 
@@ -57,3 +57,4 @@ if __name__ == '__main__':
     search_field_name = "field field-name-body"
     scrape.scrape(search_field_name)
     print(scrape.deliverable_abstracts)
+
